@@ -2,8 +2,48 @@
   font-size: 20px;
 }
 html {
-
+  font-family: Arial, Helvetica, sans-serif;
 }
 body {
 
+}
+.containerLeft {
+  display: grid;
+  grid-gap: 10px 0 0 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: rgb(166, 255, 0);
+  height: 50vh;
+}
+.item {
+  color: rgb(166, 255, 0); /*change color after transition*/
+  font-size: 2em;
+  background-color: rgba(255, 196, 0, 1);
+  transition-timing-function: cubic-bezier(1, .75, .5, 1.5);
+  transition-duration: 0.5s;
+  cursor: pointer;
+  text-align: center;
+}
+.item3 {
+  color:rgba(255, 196, 0, 1);
+  background-color: rgb(166, 255, 0);
+}
+.containerRight {
+  position: relative;
+  display: grid;
+  grid-gap: 10px 0 0 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: rgb(166, 255, 0);
+  height: 50vh;
+}
+.slideRight {
+  transform: translateX(100%);
+  transition-timing-function: cubic-bezier(1, .75, .5, 1.5);
+  transition-duration: 0.5s;
+}
+.slideLeft {
+  transform: translateX(-100%);
+  transition-timing-function: cubic-bezier(1, .75, .5, 1.5);
+  transition-duration: 0.5s;
 }
