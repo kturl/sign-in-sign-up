@@ -3,47 +3,88 @@
 }
 html {
   font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+* {
+  box-sizing: border-box;
 }
 body {
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 90vw; */
 }
-.containerLeft {
+p {
+  font-size: .75em;
+}
+.container {
+  /* border: 2px solid blue; */
+  border-radius: 20px;
   display: grid;
-  grid-gap: 10px 0 0 10px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  background-color: rgb(166, 255, 0);
-  height: 50vh;
-}
-.item {
-  color: rgb(166, 255, 0); /*change color after transition*/
-  font-size: 2em;
-  background-color: rgba(255, 196, 0, 1);
+  font-size: 1.5em;
+  background: linear-gradient(to right, rgb(255, 196, 0), rgb(255, 72, 0));
   transition-timing-function: cubic-bezier(1, .75, .5, 1.5);
   transition-duration: 0.5s;
   cursor: pointer;
+  /* margin: 10px; */
+  height: 97vh;
+  width: 100%;
+}
+.underlay {
+  color: white;
+  font-size: 1em;
+  transition-timing-function: cubic-bezier(1, .75, .5, 1.5);
   text-align: center;
+  width: 100%;
 }
-.item3 {
-  color:rgba(255, 196, 0, 1);
-  background-color: rgb(166, 255, 0);
-}
-.containerRight {
-  position: relative;
-  display: grid;
-  grid-gap: 10px 0 0 10px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  background-color: rgb(166, 255, 0);
-  height: 50vh;
-}
-.slideRight {
-  transform: translateX(100%);
+.overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 20px;
+  color: white;
+  background-color: rgba(70, 63, 55, 1);
+  font-size: 1em;
+  height: 97vh;
+  width: calc(50% - 7px);
   transition-timing-function: cubic-bezier(1, .75, .5, 1.5);
-  transition-duration: 0.5s;
+  transition-duration: 0.65s;
+  z-index: 10;
 }
-.slideLeft {
-  transform: translateX(-100%);
+.signInOverlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signUpOverlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn{
+  border: 1px solid white;
+  border-radius: 1em;
+  text-align: center;
+  /* width: 5em; */
+  padding: .3em .5em;
+}
+.btn:hover {
+  background-color: rgb(148, 133, 115);
+}
+.isVisible {
+  display: flex;
+}
+.notVisible {
+  display: none;
+}
+.slide {
+  transform: translateX(100%) /*rotate(360deg)*/;
   transition-timing-function: cubic-bezier(1, .75, .5, 1.5);
-  transition-duration: 0.5s;
+  transition-duration: 0.65s;
 }

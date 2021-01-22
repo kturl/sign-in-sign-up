@@ -8,17 +8,27 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="containerLeft">
-    <div id="leftOverlay" class="item item1">1</div>
-    <!-- <div id="leftUnderlay" class="item item3">3</div>    -->
+  <div id="container" class="container">
+    <div class="underlay">
+      <div>SIGN IN</div>
+    </div>
+    <div class="underlay">
+      <div>SIGN IN</div>
+    </div>
+    <div id="overlay" class="overlay">
+      <div id="signInOverlay" class="signInOverlay isVisible">
+        <div>Welcome Back!</div>
+        <p>Click here to sign in</p>
+        <div id="signInBtn" class="btn">SIGN IN</div>
+      </div>
+      <div id="signUpOverlay" class="signUpOverlay notVisible">
+        <div>New Here?</div>
+        <p>Sign Up to Join</p>
+        <div id="signUpBtn" class="btn">SIGN UP</div>
+      </div>
+    </div>  
   </div>
-  <!-- <div class="containerRight">
-    <div id="rightUnderlay" class="item">4</div>   
-    <div id="rightOverlay" class="item">2</div>
-  </div> -->
 
-  <script src="main.js" type="text/javascript">
-  
-  </script>
+  <script src="main.js" type="text/javascript"></script>
 </body>
 </html>
