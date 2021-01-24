@@ -10,7 +10,11 @@ signInBtn.addEventListener('click', toggleSlide);
 signUpBtn.addEventListener('click', toggleSlide);
 
 function toggleSlide() {
-  overlay.classList.toggle('slide');
+  if (overlay.classList.contains('slide')) {
+    overlay.classList.toggle('slideBack');
+    overlay.classList.toggle('slide');
+  }
+    overlay.classList.toggle('slide');
     signInOverlay.classList.toggle("isVisible");
     signInOverlay.classList.toggle("notVisible");
     signUpOverlay.classList.toggle("notVisible");
